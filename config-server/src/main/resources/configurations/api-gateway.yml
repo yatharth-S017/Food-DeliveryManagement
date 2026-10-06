@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user-service-route
+          uri: http://localhost:8081
+          predicates:
+            - Path=/users/**
+
+        - id: food-service-route
+          uri: http://localhost:8082
+          predicates:
+            - Path=/foods/**, /restaurants/**
+
+        - id: order-service-route
+          uri: http://localhost:8083
+          predicates:
+            - Path=/orders/**
+
+        - id: payment-service-route
+          uri: http://localhost:8084
+          predicates:
+            - Path=/payments/**
+
+jwt:
+  secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}

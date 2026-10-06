@@ -1,0 +1,30 @@
+# Compiled class files
+target/
+*.class
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Environment — NEVER commit real secrets
+.env
+
+# IDE files
+.idea/
+*.iml
+.settings/
+.classpath
+.project
+*.eclipse
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
